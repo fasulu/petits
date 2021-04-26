@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css'
 import Circle from "./components/Circle.jsx"
+import ContainerP from "./components/ContainerP";
 import Winner from "./pic/winner.gif"
 
 class App extends React.Component {
@@ -69,21 +70,6 @@ class App extends React.Component {
     let circlesArray = []
 
     for (let index = n; index <= p; index++) {
-      // console.log("index renderCircles", index);
-
-      // circlesArray.push(<Circle circleColor="black" />)
-
-      // if (this.state.numCase==index){
-      //   return  circlesArray.push(<Circle circleColor="white"/>)
-      // }else  if(this.state.numCase2==index){
-      //  return circlesArray.push(<Circle circleColor="red"/>)
-      // }else{
-      //   circlesArray.push(<Circle circleColor="black"/>)
-      // }
-      // if(this.state.numCase){
-      //   circlesArray.push(<Circle circleColor={this.state.numCase == index ? "white" : "black"} />)
-      // }
-
       if (this.state.numCase2 === index) {
         circlesArray.push(<Circle key={index} circleColor="#ec4444" />)
       } else if (this.state.numCase === index) {
@@ -106,9 +92,9 @@ class App extends React.Component {
       } else if (this.state.numCase2 > 37) {
         const arrayTokens2 = [...this.state.player2Tokens]
         const indexSecondFalse = arrayTokens2.indexOf(false)
-        
+
         arrayTokens2[indexSecondFalse] = true
-        
+
         this.setState({
           numCase2: 1,
           player2Tokens: arrayTokens2
@@ -130,7 +116,7 @@ class App extends React.Component {
       </div>)
     } else {
       return (
-        <div>
+        <div className="container-fluid">
           <div id="jeu">
 
             <div className="grid-game">
@@ -148,33 +134,9 @@ class App extends React.Component {
               </div>
 
               <div className="flex grid-item-5">
-                <div className="containerP1">
-                  <div className="divchildP1">
-                    <div >
-                      <Circle circleColor={this.state.player1Tokens[0] /* === true */ ? "white" : "black"} />
-                      <Circle circleColor={this.state.player1Tokens[1] ? "white" : "black"} />
-                    </div>
-
-                    <div >
-                      <Circle circleColor={this.state.player1Tokens[2] ? "white" : "black"} />
-                      <Circle circleColor={this.state.player1Tokens[3] ? "white" : "black"} />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="containerP2">
-                  <div className="divchildP2">
-                    <div >
-                      <Circle circleColor={this.state.player2Tokens[0] ? "red" : "black"} />
-                      <Circle circleColor={this.state.player2Tokens[1] ? "red" : "black"} />
-                    </div>
-
-                    <div >
-                      <Circle circleColor={this.state.player2Tokens[2] ? "red" : "black"} />
-                      <Circle circleColor={this.state.player2Tokens[3] ? "red" : "black"} />
-                    </div>
-                  </div>
-                </div>
+                
+                <ContainerP player1Token={this.state.player1Token} />
+                <ContainerP player2Token={this.state.player2Token} />
 
                 <div className="numeroDee">
 
@@ -218,7 +180,4 @@ class App extends React.Component {
 
 }
 
-
-
 export default App
-
