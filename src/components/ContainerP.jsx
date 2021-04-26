@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import './Circle.css'
-import './Circle'
+// import './Circle'
 
 class ContainerP extends Component {
 
     constructor(props) {
         super(props);
 
-        
+
     }
     render() {
         return (
@@ -39,6 +39,7 @@ class ContainerP extends Component {
                         </div>
                     </div>
                 </div>
+                <i className="fas fa-circle" style={{ color: this.props.circleColor }}></i>
             </div>
 
         )
