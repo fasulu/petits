@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Circle.css'
-import './Circle'
+import Circle from "./Circle"
 
 class ContainerP extends Component {
 
@@ -10,6 +10,8 @@ class ContainerP extends Component {
 
     }
     render() {
+        console.log("render in containerP",this.props)
+        
         return (
 
             <div className="containerP1">
@@ -39,7 +41,7 @@ class ContainerP extends Component {
                         </div>
                     </div>
                 </div>
-                <i className="fas fa-circle" style={{ color: this.props.circleColor }}></i>
+                {/* <i className="fas fa-circle" style={{ color: this.props.circleColor }}></i> */}
             </div>
 
         )
