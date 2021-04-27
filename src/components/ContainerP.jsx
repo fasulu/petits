@@ -10,8 +10,8 @@ class ContainerP extends Component {
 
     }
     render() {
-        console.log("render in containerP",this.props)
-        
+        console.log("render in containerP", this.props.player1Tokens)
+        console.log("render in containerP", this.props.player2Tokens)
         return (
 
             <div className="containerP1">

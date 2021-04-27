@@ -135,8 +135,8 @@ class App extends React.Component {
 
               <div className="flex grid-item-5">
                 
-                <ContainerP player1Token={this.state.player1Token} />
-                <ContainerP player2Token={this.state.player2Token} />
+                <ContainerP player1Tokens={this.state.player1Tokens} player2Tokens={this.state.player2Tokens} />
+                {/* <ContainerP player2Tokens={this.state.player2Tokens} /> */}
 
                 <div className="numeroDee">
 
