@@ -15,10 +15,9 @@ class ContainerP extends Component {
         // console.log("render in containerP", this.props.player2Tokens)
         return (
 
-
-            <div className="containerP1">
-                <div className="divchildP1">
-                    <div >
+            <div className="">
+                <div className="containerP1">
+                    <div className="divchildP1">
                         <Circle circleColor={this.props.player1Tokens[0] ? "green" : "black"} />
                         <Circle circleColor={this.props.player1Tokens[1] ? "green" : "black"} />
                     </div>
@@ -31,20 +30,17 @@ class ContainerP extends Component {
 
                 <div className="containerP2">
                     <div className="divchildP2">
-                        <div >
-                            <Circle circleColor={this.props.player2Tokens[0] ? "orange" : "black"} />
-                            <Circle circleColor={this.props.player2Tokens[1] ? "orange" : "black"} />
-                        </div>
+                        <Circle circleColor={this.props.player2Tokens[0] ? "orange" : "black"} />
+                        <Circle circleColor={this.props.player2Tokens[1] ? "orange" : "black"} />
+                    </div>
 
-                        <div >
-                            <Circle circleColor={this.props.player2Tokens[2] ? "orange" : "black"} />
-                            <Circle circleColor={this.props.player2Tokens[3] ? "orange" : "black"} />
-                        </div>
+                    <div >
+                        <Circle circleColor={this.props.player2Tokens[2] ? "orange" : "black"} />
+                        <Circle circleColor={this.props.player2Tokens[3] ? "orange" : "black"} />
                     </div>
                 </div>
 
             </div>
-
 
         )
     }

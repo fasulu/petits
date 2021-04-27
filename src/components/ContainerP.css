@@ -1,28 +1,28 @@
-/* .grid-item-5 {
+.grid-item-5 {
     flex-wrap: wrap;
     justify-content: space-around;
-} */
+}
 
 .containerP1 {
     text-align: center;
     border-radius: 30%;
-    height: 250px;
+    height: 200px;
     width: 250px;
     background-color: greenyellow;
 }
 
 .divchildP1 {
-    padding-top: 35px;
+    padding-top: 20px;
 }
 
 .containerP2 {
     text-align: center;
     border-radius: 30%;
-    height: 250px;
+    height: 200px;
     width: 250px;
     background-color: #ec4444;
 }
 
 .divchildP2 {
-    padding-top: 35px;
+    padding-top: 20px;
 }

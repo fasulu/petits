@@ -127,8 +127,9 @@ class App extends React.Component {
     if (this.state.player1Tokens.indexOf(false) === -1 || this.state.player2Tokens.indexOf(false) === -1) {
       return (
         <div className="container-fluid">
-          <p> {this.state.winner} You Win !</p>
+          <p> You Win !</p>
           <div className="" style={{ background: `url(${Winner})`, height: `${window.innerHeight}px`, backgroundRepeat: "no-repeat", marginLeft: "7vmax" }} />
+          {this.state.winner}
         </div>)
     } else {
       return (
@@ -150,11 +151,9 @@ class App extends React.Component {
               </div>
 
               <div className="flex grid-item-5">
-              <div> 
-                
+
                 <ContainerP player1Tokens={this.state.player1Tokens} player2Tokens={this.state.player2Tokens} />
 
-              </div>
 
                 <div className="numeroDee">
 
