@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css'
 import Circle from "./components/Circle.jsx"
-import ContainerP from "./components/ContainerP";
+import ContainerP from "./components/ContainerP.jsx";
 import Winner from "./pic/winner.gif"
 
 class App extends React.Component {
@@ -150,8 +150,11 @@ class App extends React.Component {
               </div>
 
               <div className="flex grid-item-5">
-
+              <div> 
+                
                 <ContainerP player1Tokens={this.state.player1Tokens} player2Tokens={this.state.player2Tokens} />
+
+              </div>
 
                 <div className="numeroDee">
 
