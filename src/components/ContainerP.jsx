@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Circle.css'
-// import './Circle'
+import './Circle'
 
 class ContainerP extends Component {
 
