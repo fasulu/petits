@@ -16,7 +16,8 @@ class App extends React.Component {
       numCase2: 0,
       player1Tokens: [false, false, false, false],
       player2Tokens: [false, false, false, false],
-      currentPlayer: 1
+      currentPlayer: 1,
+      winner: ""
 
     }
 
@@ -73,7 +74,7 @@ class App extends React.Component {
       if (this.state.numCase2 === index) {
         circlesArray.push(<Circle key={index} circleColor="#ec4444" />)
       } else if (this.state.numCase === index) {
-        circlesArray.push(<Circle key={index} circleColor="#4480ec" />)
+        circlesArray.push(<Circle key={index} circleColor="greenyellow" />)
       } else {
         circlesArray.push(<Circle key={index} circleColor="black" />)
       }
@@ -109,11 +110,26 @@ class App extends React.Component {
   }
 
   renderVictory() {
+
+    if (this.state.player1Tokens[3] === "true") {
+      this.setState({
+        winner: "Player 1 won the race"
+      })
+
+    } else if (this.state.player2Tokens[3] === "true") {
+      this.setState({
+        winner: "Player 2 won the race"
+      })
+
+    }
+    console.log("the winner is ", this.state.winner)
+
     if (this.state.player1Tokens.indexOf(false) === -1 || this.state.player2Tokens.indexOf(false) === -1) {
-      return (<div>
-        <p>You Win !</p>
-        <div style={{ background: `url(${Winner})`, height: `${window.innerHeight}px`, backgroundRepeat: "no-repeat", marginLeft: "7vmax" }} />
-      </div>)
+      return (
+        <div className="container-fluid">
+          <p> {this.state.winner} You Win !</p>
+          <div className="" style={{ background: `url(${Winner})`, height: `${window.innerHeight}px`, backgroundRepeat: "no-repeat", marginLeft: "7vmax" }} />
+        </div>)
     } else {
       return (
         <div className="container-fluid">
@@ -134,9 +150,8 @@ class App extends React.Component {
               </div>
 
               <div className="flex grid-item-5">
-                
+
                 <ContainerP player1Tokens={this.state.player1Tokens} player2Tokens={this.state.player2Tokens} />
-                {/* <ContainerP player2Tokens={this.state.player2Tokens} /> */}
 
                 <div className="numeroDee">
 

@@ -77,7 +77,7 @@ p {
 
 .b1 {
     /* margin-right: 18vmax; */
-    background-color: cornflowerblue;
+    background-color: greenyellow;
 }
 
 .numeroDee {
@@ -86,7 +86,7 @@ p {
 }
 
 .b2 {
-  
+    border: wheat;
     background-color: #ec4444;
 }
 
@@ -95,7 +95,7 @@ p {
     border-radius: 30%;
     height: 250px;
     width: 250px;
-    background-color: #4480ec;
+    background-color: greenyellow;
 }
 
 .divchildP1 {
@@ -115,7 +115,7 @@ p {
 }
 
 .spanP1{
-    color: #4480ec;
+    color: greenyellow;
 }
 
 
